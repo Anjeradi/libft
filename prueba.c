@@ -6,14 +6,13 @@
 
 int main(void)
 {
-	char *src = "Esto es una prueba";
-	char *prueba = ft_strdup(src);
-	//char dest[buff_size] = "Esto es una prueba";
+	char src[buff_size];
+	void *prueba;
 	
+	prueba = memset(src, -1, 20);
 	if (!prueba)
 		puts("NULL");
 	else
-		puts(prueba);
-	free(prueba);
+		puts((char *)prueba);
 	return 0;
 }
