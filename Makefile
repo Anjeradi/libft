@@ -6,7 +6,7 @@ OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
 	  ft_toupper.o ft_atoi.o ft_strlen.o \
 	  ft_strlcpy.o ft_strlcat.o ft_strchr.o \
 	  ft_strncmp.o ft_strnstr.o ft_strdup.o \
-	  ft_memset.o
+	  ft_memset.o ft_bzero.o ft_memcpy.o
 
 all: $(NAME)
 
@@ -65,6 +65,12 @@ ft_strdup.o: ft_strdup.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 ft_memset.o: ft_memset.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_bzero.o: ft_bzero.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_memcpy.o: ft_memcpy.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean fclean re

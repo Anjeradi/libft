@@ -6,13 +6,16 @@
 
 int main(void)
 {
-	char src[buff_size];
-	void *prueba;
-	
-	prueba = memset(src, -1, 20);
-	if (!prueba)
-		puts("NULL");
-	else
-		puts((char *)prueba);
+	char *src = "Esto es una prueba";
+	char dest[buff_size];
+
+	memcpy(dest, src, 19);
+	puts(dest);
+	puts(src);
+
+	ft_memcpy(dest, src, 19);
+	puts(dest);
+	puts(src);
+
 	return 0;
 }

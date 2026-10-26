@@ -2,12 +2,10 @@
 
 void *ft_memset(void *a, int c, size_t n)
 {
-	size_t i;
-	void *a_first_addr;
+	unsigned char *p;
 
-	i = 0;
-	a_first_addr = a;
-	while (a < a_first_addr + n)
-		*(a++) = (unsigned char)c;
-	return (a_first_addr);
+	p = a;
+	while (p < (unsigned char *)a + n)
+		*(p++) = (unsigned char)c;
+	return (a);
 }
