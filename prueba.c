@@ -6,16 +6,11 @@
 
 int main(void)
 {
-	char *src = "Esto es una prueba";
-	char dest[buff_size];
+  char *str = "Esto es una prueba";
+  char *prueba = (char *)ft_memchr(str, 'z', 19);
 
-	memcpy(dest, src, 19);
-	puts(dest);
-	puts(src);
-
-	ft_memcpy(dest, src, 19);
-	puts(dest);
-	puts(src);
+  if (prueba)
+	  puts(prueba);
 
 	return 0;
 }
