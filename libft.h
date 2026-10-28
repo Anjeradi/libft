@@ -4,6 +4,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define MAX_SPACE 9223372036854775807
+# define STDOUT 1
+
 typedef unsigned long size_t;
 
 /* ctype.h */ /* completed */
@@ -22,7 +25,7 @@ int ft_toupper(int c);
 
 int ft_tolower(int c);
 
-/* string.h */
+/* string.h */ /* completed */
 
 size_t ft_strlen(const char *s);
 
@@ -52,10 +55,34 @@ void *ft_memchr(const void *s, int c, size_t n);
 
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 
-/* stdlib.h */
+/* stdlib.h */ /* completed */
 
 int ft_atoi(const char *nptr);
 
 void *ft_calloc(size_t n, size_t size);
+
+/* libft.h originals */
+
+char *ft_substr(char const *s, unsigned int start, size_t len);
+
+char *ft_strjoin(char const *s1, char const *s2);
+
+char *ft_strtrim(char const *s1, char const *set);
+
+char **ft_split(char const *s, char c);
+
+char *ft_itoa(int n);
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+void ft_putchar_fd(char c, int fd);
+
+void ft_putstr_fd(char *s, int fd);
+
+void ft_putendl_fd(char *s, int fd);
+
+void ft_putnbr_fd(int n, int fd);
 
 #endif // LIBFT_H

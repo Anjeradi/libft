@@ -3,6 +3,7 @@
 
 # executables
 *.out
+prueba
 
 # temp files
 *.swp
