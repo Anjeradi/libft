@@ -7,12 +7,10 @@
 
 int main(void)
 {
-  	char *str = "Otra prueba";
-	int fd = open("prueba.txt", O_CREAT | O_WRONLY | O_APPEND, 0666);
+  	int number = 100;
 
-	ft_putendl_fd(str, fd);
-
-	close(fd);
+	ft_putnbr_fd(number, STDOUT);
+	ft_putchar_fd('\n', STDOUT);
 
 	return 0;
 }

@@ -9,7 +9,7 @@ OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
 	  ft_memset.o ft_bzero.o ft_memcpy.o \
 	  ft_memmove.o ft_memchr.o ft_memcmp.o \
 	  ft_calloc.o ft_putchar_fd.o ft_putstr_fd.o \
-	  ft_putendl_fd.o
+	  ft_putendl_fd.o ft_itoa.c ft_putnbr.o
 
 all: $(NAME)
 
@@ -95,6 +95,12 @@ ft_putstr_fd.o: ft_putstr_fd.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 ft_putendl_fd.o: ft_putendl_fd.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+	
+ft_itoa.o: ft_itoa.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_putnbr_fd.o: ft_putnbr_fd.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean fclean re
