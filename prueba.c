@@ -5,12 +5,24 @@
 
 #define buff_size 100
 
+void free_null(char **arr, size_t, len);
+
 int main(void)
 {
-  	int number = 100;
-
-	ft_putnbr_fd(number, STDOUT);
-	ft_putchar_fd('\n', STDOUT);
-
+  	char *str = "Esto es una prueba";
+	char **array = ft_split(str, ' ');
+	for (size_t i = 0; array[i] != NULL; i++)
+		puts(array[i]);
+	free_null(array);
 	return 0;
+}
+
+void free_null(char **arr, size_t, len)
+{
+	size_t i;
+
+	i = 0;
+	while (i < len)
+		free(arr[i]);
+	free(arr);
 }
