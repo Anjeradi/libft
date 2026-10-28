@@ -7,3 +7,6 @@ prueba
 
 # temp files
 *.swp
+
+# text files
+*.txt
