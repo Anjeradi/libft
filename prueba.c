@@ -6,16 +6,20 @@
 #define buff_size 100
 
 void free_null(char **arr);
+char function(unsigned int i, char c)
+{
+	(void)i;
+	return (c + 13);
+}
 
 int main(void)
 {
   	char *str = "Esto es una prueba";
-	char **array = ft_split(str, 'E');
-	if (!array)
+	char *prueba = ft_strmapi(str, function);
+	if (!prueba)
 		return 1;
-	for (size_t i = 0; array[i] != NULL; i++)
-		puts(array[i]);
-	free_null(array);
+	puts(prueba);
+	free(prueba);
 	return 0;
 }
 
