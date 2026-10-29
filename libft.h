@@ -6,6 +6,7 @@
 
 # define MAX_SPACE 9223372036854775807
 # define STDOUT 1
+# define PAGE_SIZE 4096
 
 typedef unsigned long size_t;
 

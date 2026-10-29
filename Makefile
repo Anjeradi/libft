@@ -11,7 +11,7 @@ OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
 	  ft_calloc.o ft_putchar_fd.o ft_putstr_fd.o \
 	  ft_putendl_fd.o ft_itoa.c ft_putnbr.o \
 	  ft_substr.o ft_strjoin.o ft_strtrim.o \
-	  ft_split.o
+	  ft_split.o ft_strmapi.o
 
 all: $(NAME)
 
@@ -115,6 +115,9 @@ ft_strtrim.o: ft_strtrim.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 ft_split.o: ft_split.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_strmapi.o: ft_strmapi.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean fclean re

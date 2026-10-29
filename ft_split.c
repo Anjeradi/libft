@@ -1,21 +1,20 @@
 #include "libft.h"
 
 static size_t word_count(char const *s, char c);
-static void free_null(char **arr, size_t len);
-static size_t word_len(char const *s);
-static char **array_init(char const *s, size_t total_size, char c);
+static unsigned int free_null(char **arr);
+static size_t ignore_sep(char const *s, char c);
+static unsigned int array_init(char **arr, char const *s, char c, size_t len);
 
 char **ft_split(char const *s, char c)
 {
-	size_t arr_size;
-	size_t i;
 	char **s_array;
-
+	
 	if (!s)
 		return (NULL);
-	arr_size = word_count(s, c) + 1;
-	s_array = array_init(s, arr_size);
+	s_array = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!s_array)
+		return (NULL);
+	if (!array_init(s_array, s, c, ft_strlen(s) + 1))
 		return (NULL);
 	return (s_array);
 }
@@ -23,54 +22,68 @@ char **ft_split(char const *s, char c)
 static size_t word_count(char const *s, char c)
 {
 	size_t count;
+	size_t i;
+	size_t first_c;
 	
 	count = 0;
-	while (*s)
+	i = 0;
+	first_c = 0;
+	while (s[i])
 	{
-		if (*s == c)
-			s++;
-		if (ft_isprint(*s))
+		while (s[i] == c && s[i])
+			i++;
+		first_c = i;
+		while (s[i] != c && s[i])
+			i++;
+		if (i > first_c)
 			count++;
-		while (ft_isprint(*s))
-			s++;
 	}
 	return (count);
 }
 
-static void free_null(char **arr, size_t len)
+static unsigned int free_null(char **arr)
 {
-	size_t i;
+	char **start;
 
-	i = 0;
-	while (i < len)
-		free(arr[i++]);
-	free(arr);
+	start = arr;
+	while (*arr)
+		free(arr++);
+	free(start);
+	return (0);
 }
 
-static char **array_init(char const *s, size_t total_size, char c)
+static size_t ignore_sep(char const *s, char c)
 {
 	size_t i;
-	size_t len;
-	char **string_array;
 
-	string_array = (char **)malloc(total_size);
-	if (!string_array)
-		return (NULL);
 	i = 0;
-	while (i < total_size && *s)
-	{
-		if(*s == c)
-			s++;
-		len = word_len(s);
-		string_array[i] = (char *)malloc(len);
-		if (!string_array[i])
-		{
-			free_null(string_array, i);
-			return (NULL);
-		}
-		ft_strlcpy(string_array, s, len);
-		s += len;
+	while (s[i] && s[i] == c)
 		i++;
+	return (i);
+}
+
+static unsigned int array_init(char **arr, char const *s, char c, size_t len)
+{
+	char const *start;
+	char const *temp_ptr;
+
+	start = s;
+	while (s < start + len)
+	{
+		 s += ignore_sep(s, c);
+		temp_ptr = s;
+		if (!*s)
+			break ;
+		while (*s && *s != c)
+			s++;
+		if (s > temp_ptr)
+		{
+			*arr = (char *)malloc(s - temp_ptr + 1);
+			if (!*arr)
+				return (free_null(arr));
+		}
+		ft_strlcpy(*(arr++), temp_ptr, s - temp_ptr + 1);
 	}
-	return (string_array);
+	*arr = NULL;
+	return (1);
 }
