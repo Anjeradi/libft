@@ -11,7 +11,10 @@ OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
 	  ft_calloc.o ft_putchar_fd.o ft_putstr_fd.o \
 	  ft_putendl_fd.o ft_itoa.c ft_putnbr.o \
 	  ft_substr.o ft_strjoin.o ft_strtrim.o \
-	  ft_split.o ft_strmapi.o ft_striteri.o
+	  ft_split.o ft_strmapi.o ft_striteri.o \
+      ft_lstnew.o ft_lstadd_front.o ft_lstsize.o \
+      ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o \
+      ft_lstclear.o ft_lstiter.o ft_lstmap.o
 
 all: $(NAME)
 
@@ -122,6 +125,31 @@ ft_strmapi.o: ft_strmapi.c libft.h
 
 ft_striteri.o: ft_striteri.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstnew.o: ft_lstnew.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstadd_front.o: ft_lstadd_front.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstsize.o: ft_lstsize.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstlast.o: ft_lstlast.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstdelone.o: ft_lstdelone.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstclear.o: ft_lstclear.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstiter.o: ft_lstiter.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_lstmap.o: ft_lstmap.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
 .PHONY: clean fclean re
 
 clean:
