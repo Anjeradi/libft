@@ -8,18 +8,15 @@
 void free_null(char **arr);
 char function(unsigned int i, char c)
 {
-	(void)i;
-	return (c + 13);
+	return (i % 2 == 1? 'a': c);
 }
 
 int main(void)
 {
-  	char *str = "Esto es una prueba";
-	char *prueba = ft_strmapi(str, function);
-	if (!prueba)
-		return 1;
+  	char str[100] = "Esto es una prueba";
+    char *prueba = ft_strmapi(str, function);
 	puts(prueba);
-	free(prueba);
+    free(prueba);
 	return 0;
 }
 
