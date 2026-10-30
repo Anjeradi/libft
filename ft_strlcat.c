@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/30 18:54:23 by ajeremy           #+#    #+#             */
+/*   Updated: 2026/10/30 18:54:24 by ajeremy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t ft_strlcat(char *dest, const char *src, size_t dsize)
@@ -9,9 +21,9 @@ size_t ft_strlcat(char *dest, const char *src, size_t dsize)
 
 	s_size = ft_strlen(src);
 	if (!dsize)
-		return (s_size);
+		return (s_size + dsize);
 	i = 0;
-	while (dest[i])
+	while (i < dsize && dest[i])
 		i++;
 	if (i == dsize)
 		return (dsize + s_size);

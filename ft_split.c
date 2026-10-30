@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/30 18:53:19 by ajeremy           #+#    #+#             */
+/*   Updated: 2026/10/30 18:53:23 by ajeremy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static size_t word_count(char const *s, char c);
-static unsigned int free_null(char **arr);
-static size_t ignore_sep(char const *s, char c);
-static unsigned int array_init(char **arr, char const *s, char c, size_t len);
+static size_t	word_count(char const *s, char c);
+static unsigned int	free_null(char **arr);
+static size_t	ignore_sep(char const *s, char c);
+static unsigned int	array_init(char **arr, char const *s, char c, size_t len);
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **s_array;
+	char	**s_array;
 	
 	if (!s)
 		return (NULL);
@@ -19,11 +31,11 @@ char **ft_split(char const *s, char c)
 	return (s_array);
 }
 
-static size_t word_count(char const *s, char c)
+static size_t	word_count(char const *s, char c)
 {
-	size_t count;
-	size_t i;
-	size_t first_c;
+	size_t	count;
+	size_t	i;
+	size_t	first_c;
 	
 	count = 0;
 	i = 0;
@@ -41,9 +53,9 @@ static size_t word_count(char const *s, char c)
 	return (count);
 }
 
-static unsigned int free_null(char **arr)
+static unsigned int	free_null(char **arr)
 {
-	char **start;
+	char	**start;
 
 	start = arr;
 	while (*arr)
@@ -52,9 +64,9 @@ static unsigned int free_null(char **arr)
 	return (0);
 }
 
-static size_t ignore_sep(char const *s, char c)
+static size_t	ignore_sep(char const *s, char c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] && s[i] == c)
@@ -62,10 +74,10 @@ static size_t ignore_sep(char const *s, char c)
 	return (i);
 }
 
-static unsigned int array_init(char **arr, char const *s, char c, size_t len)
+static unsigned int	array_init(char **arr, char const *s, char c, size_t len)
 {
-	char const *start;
-	char const *temp_ptr;
+	char const	*start;
+	char const	*temp_ptr;
 
 	start = s;
 	while (s < start + len)

@@ -9,7 +9,7 @@ OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
 	  ft_memset.o ft_bzero.o ft_memcpy.o \
 	  ft_memmove.o ft_memchr.o ft_memcmp.o \
 	  ft_calloc.o ft_putchar_fd.o ft_putstr_fd.o \
-	  ft_putendl_fd.o ft_itoa.c ft_putnbr.o \
+	  ft_putendl_fd.o ft_itoa.c ft_putnbr_fd.o \
 	  ft_substr.o ft_strjoin.o ft_strtrim.o \
 	  ft_split.o ft_strmapi.o ft_striteri.o \
       ft_lstnew.o ft_lstadd_front.o ft_lstsize.o \
@@ -160,4 +160,5 @@ fclean: clean
 
 cprueba: clean
 	rm prueba
+
 re: fclean all
