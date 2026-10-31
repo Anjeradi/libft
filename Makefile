@@ -12,9 +12,10 @@ OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
 	  ft_putendl_fd.o ft_itoa.c ft_putnbr_fd.o \
 	  ft_substr.o ft_strjoin.o ft_strtrim.o \
 	  ft_split.o ft_strmapi.o ft_striteri.o \
-      ft_lstnew.o ft_lstadd_front.o ft_lstsize.o \
-      ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o \
-      ft_lstclear.o ft_lstiter.o ft_lstmap.o
+    ft_lstnew.o ft_lstadd_front.o ft_lstsize.o \
+    ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o \
+    ft_lstclear.o ft_lstiter.o ft_lstmap.o \
+		ft_strrchr.o
 
 all: $(NAME)
 
@@ -148,6 +149,9 @@ ft_lstiter.o: ft_lstiter.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 ft_lstmap.o: ft_lstmap.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_stchrr.o: ft_stchrr.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean fclean re
