@@ -15,7 +15,7 @@
 static size_t	word_count(char const *s, char c);
 static unsigned int	free_null(char **arr);
 static size_t	ignore_sep(char const *s, char c);
-static unsigned int	array_init(char **arr, char const *s, char c, size_t len);
+static unsigned int	array_init(char **arr, char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -26,7 +26,7 @@ char	**ft_split(char const *s, char c)
 	s_array = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!s_array)
 		return (NULL);
-	if (!array_init(s_array, s, c, ft_strlen(s) + 1))
+	if (!array_init(s_array, s, c))
 		return (NULL);
 	return (s_array);
 }
@@ -42,10 +42,10 @@ static size_t	word_count(char const *s, char c)
 	first_c = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
+		while (s[i] && s[i] == c)
 			i++;
 		first_c = i;
-		while (s[i] != c && s[i])
+		while (s[i] && s[i] != c)
 			i++;
 		if (i > first_c)
 			count++;
@@ -59,7 +59,7 @@ static unsigned int	free_null(char **arr)
 
 	start = arr;
 	while (*arr)
-		free(arr++);
+		free(*(arr++));
 	free(start);
 	return (0);
 }
@@ -74,13 +74,13 @@ static size_t	ignore_sep(char const *s, char c)
 	return (i);
 }
 
-static unsigned int	array_init(char **arr, char const *s, char c, size_t len)
+static unsigned int	array_init(char **arr, char const *s, char c)
 {
-	char const	*start;
+	char	**start;
 	char const	*temp_ptr;
 
-	start = s;
-	while (s < start + len)
+	start = arr;
+	while (*s)
 	{
 		 s += ignore_sep(s, c);
 		temp_ptr = s;
@@ -92,9 +92,9 @@ static unsigned int	array_init(char **arr, char const *s, char c, size_t len)
 		{
 			*arr = (char *)malloc(s - temp_ptr + 1);
 			if (!*arr)
-				return (free_null(arr));
+				return (free_null(start));
+			ft_strlcpy(*(arr++), temp_ptr, s - temp_ptr + 1);
 		}
-		ft_strlcpy(*(arr++), temp_ptr, s - temp_ptr + 1);
 	}
 	*arr = NULL;
 	return (1);
