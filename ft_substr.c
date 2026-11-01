@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-static char *empty_string(void);
-static size_t calculate_size()
-
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *p;
@@ -25,8 +22,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start > s_length)
-		return (empty_string());
-	if (len > ft_strlen(s + start)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
 		p = (char *)malloc(ft_strlen(s + start) + 1);
 	else
 		p = (char *)malloc(len + 1);
@@ -37,15 +34,4 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		p[i++] = s[start++];
 	p[i] = '\0';
 	return (p);
-}
-
-static char *empty_string(void)
-{
-	char *empty_string;
-
-	empty_string = (char *)malloc(1);
-	if (!empty_string)
-		return (NULL);
-	*empty_string = '\0';
-	return (empty_string);
 }

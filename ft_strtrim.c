@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-static unsigned int cmp_set(char c, char const *set);
+static unsigned int	cmp_set(char c, char const *set);
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trimmed_s;
-	size_t i;
+	char	*trimmed_s;
+	size_t	i;
 
 	if (!s1 || !set)
 		return (NULL);

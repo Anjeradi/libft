@@ -72,5 +72,5 @@ static void	build_number(char *number, int n, size_t size, unsigned int is_negat
 		p--;
 		n /= 10;
 	}
-	number[size + 1] = '\0';
+	number[size] = '\0';
 }

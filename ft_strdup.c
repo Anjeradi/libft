@@ -18,6 +18,14 @@ char *ft_strdup(const char *s)
 	char *new_string;
 
 	s_len = ft_strlen(s);
+	if (s_len == 1)
+	{
+		new_string = (char *)malloc(1);
+		if (!new_string)
+			return (NULL);
+		*new_string = '\0';
+		return (new_string);
+	}
 	new_string = (char *)malloc(s_len + 1);
 	if (!new_string)
 		return (NULL);
