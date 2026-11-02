@@ -6,7 +6,7 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 16:45:57 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/11/02 17:26:30 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 19:08:41 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/* ctype.h */ /* completed */
+/* ctype.h */
 
 int				ft_isalpha(int c);
 
@@ -42,7 +42,7 @@ int				ft_toupper(int c);
 
 int				ft_tolower(int c);
 
-/* string.h */ /* completed */
+/* string.h */
 
 size_t			ft_strlen(const char *s);
 
@@ -72,13 +72,13 @@ void			*ft_memchr(const void *s, int c, size_t n);
 
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
-/* stdlib.h */ /* completed */
+/* stdlib.h */
 
 int				ft_atoi(const char *nptr);
 
 void			*ft_calloc(size_t n, size_t size);
 
-/* libft.h originals */ /* completed */
+/* libft.h originals */
 
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 
