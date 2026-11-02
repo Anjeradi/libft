@@ -20,7 +20,7 @@ The following resources were used to achieve this project's objectives:
 
 - **The C Programming Language** - Brian Kernighan and Dennis Ritchie;
 - **Memory Management, Explained Simply (parts 1 and 2)** videos - Nic Barker on [YouYube](https://youtu.be/3rez2rDYHHA?si=gp6lweEpN3D9d8GQ);
-- **The Linux Man pages** - [Man-pages](https://man7.org/linux/man-pages/);
+- **The Linux Man Pages** - [Man-pages](https://man7.org/linux/man-pages/);
 - **Queue Data Structure & Operations (Linked List Based)** and **Split Strings Function** - Portfolio Courses on [Youtube](https://www.youtube.com/@PortfolioCourses)
 
 ### AI usage
