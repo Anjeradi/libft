@@ -6,16 +6,16 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:46:13 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:46:14 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:31:53 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *s)
+int	ft_atoi(const char *s)
 {
-	unsigned int is_negative;
-	int number;
+	unsigned int	is_negative;
+	int				number;
 
 	while (*s == ' ' || (*s >= 9 && *s <= 13))
 		s++;
@@ -38,5 +38,4 @@ int ft_atoi(const char *s)
 		s++;
 	}
 	return (number);
-
 }

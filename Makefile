@@ -1,29 +1,26 @@
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address -g
+CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 OBJECTS = ft_isdigit.o ft_isalpha.o ft_isalnum.o \
-	  ft_isascii.o ft_isprint.o ft_tolower.o \
-	  ft_toupper.o ft_atoi.o ft_strlen.o \
-	  ft_strlcpy.o ft_strlcat.o ft_strchr.o \
-	  ft_strncmp.o ft_strnstr.o ft_strdup.o \
-	  ft_memset.o ft_bzero.o ft_memcpy.o \
-	  ft_memmove.o ft_memchr.o ft_memcmp.o \
-	  ft_calloc.o ft_putchar_fd.o ft_putstr_fd.o \
-	  ft_putendl_fd.o ft_itoa.c ft_putnbr_fd.o \
-	  ft_substr.o ft_strjoin.o ft_strtrim.o \
-	  ft_split.o ft_strmapi.o ft_striteri.o \
-    ft_lstnew.o ft_lstadd_front.o ft_lstsize.o \
-    ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o \
-    ft_lstclear.o ft_lstiter.o ft_lstmap.o \
-		ft_strrchr.o
+	ft_isascii.o ft_isprint.o ft_tolower.o \
+	ft_toupper.o ft_atoi.o ft_strlen.o \
+	ft_strlcpy.o ft_strlcat.o ft_strchr.o \
+	ft_strncmp.o ft_strnstr.o ft_strdup.o \
+	ft_memset.o ft_bzero.o ft_memcpy.o \
+	ft_memmove.o ft_memchr.o ft_memcmp.o \
+	ft_calloc.o ft_putchar_fd.o ft_putstr_fd.o \
+	ft_putendl_fd.o ft_itoa.o ft_putnbr_fd.o \
+	ft_substr.o ft_strjoin.o ft_strtrim.o \
+	ft_split.o ft_strmapi.o ft_striteri.o \
+	ft_lstnew.o ft_lstadd_front.o ft_lstsize.o \
+	ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o \
+	ft_lstclear.o ft_lstiter.o ft_lstmap.o \
+	ft_strrchr.o
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $@ $^
-
-prueba: $(OBJECTS) prueba.o
-	$(CC) $(CFLAGS) $^ -o $@
 
 prueba.o: prueba.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -157,12 +154,9 @@ ft_stchrr.o: ft_stchrr.c libft.h
 .PHONY: clean fclean re
 
 clean:
-	@rm ./*.o
+	rm $(OBJECTS)
 
 fclean: clean
 	rm $(NAME)
-
-cprueba: clean
-	rm prueba
 
 re: fclean all

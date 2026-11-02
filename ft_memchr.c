@@ -6,17 +6,17 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:49:33 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:49:34 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:45:57 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char *sptr;
-	sptr = (const unsigned char *)s;
+	const unsigned char			*sptr;
 
+	sptr = (const unsigned char *)s;
 	while (n--)
 	{
 		if (*sptr == (unsigned char)c)

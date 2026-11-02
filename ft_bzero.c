@@ -6,15 +6,15 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:46:23 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:46:25 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:32:28 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *a, size_t n)
+void	ft_bzero(void *a, size_t n)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	p = a;
 	while (p < (unsigned char *)a + n)

@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:48:43 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:48:44 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:37:07 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst || !del)
 		return ;

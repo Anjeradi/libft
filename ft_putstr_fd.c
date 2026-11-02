@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:53:03 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:53:04 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:51:36 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;

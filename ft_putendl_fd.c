@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:50:45 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:50:46 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:50:14 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;

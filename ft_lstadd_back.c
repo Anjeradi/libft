@@ -6,16 +6,16 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:48:10 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:48:11 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:35:59 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *node;
-	
+	t_list	*node;
+
 	if (!lst || !new)
 		return ;
 	if (!*lst)

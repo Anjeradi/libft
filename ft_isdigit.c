@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:47:39 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:47:40 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:34:50 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

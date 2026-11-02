@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:47:49 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:47:50 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:35:03 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

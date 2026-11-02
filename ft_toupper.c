@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:56:20 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:56:21 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 17:24:21 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (ft_isalpha(c) && (c >= 'a' && c <= 'z'))
 	{

@@ -6,13 +6,13 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:56:08 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:56:11 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 17:23:41 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (ft_isalpha(c) && (c >= 'A' && c <= 'Z'))
 	{

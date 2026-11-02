@@ -6,21 +6,21 @@
 /*   By: ajeremy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:53:19 by ajeremy           #+#    #+#             */
-/*   Updated: 2026/10/30 18:53:23 by ajeremy          ###   ########.fr       */
+/*   Updated: 2026/11/02 16:53:35 by ajeremy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	word_count(char const *s, char c);
+static size_t		word_count(char const *s, char c);
 static unsigned int	free_null(char **arr);
-static size_t	ignore_sep(char const *s, char c);
+static size_t		ignore_sep(char const *s, char c);
 static unsigned int	array_init(char **arr, char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**s_array;
-	
+
 	if (!s)
 		return (NULL);
 	s_array = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
@@ -36,7 +36,7 @@ static size_t	word_count(char const *s, char c)
 	size_t	count;
 	size_t	i;
 	size_t	first_c;
-	
+
 	count = 0;
 	i = 0;
 	first_c = 0;
@@ -76,13 +76,13 @@ static size_t	ignore_sep(char const *s, char c)
 
 static unsigned int	array_init(char **arr, char const *s, char c)
 {
-	char	**start;
+	char		**start;
 	char const	*temp_ptr;
 
 	start = arr;
 	while (*s)
 	{
-		 s += ignore_sep(s, c);
+		s += ignore_sep(s, c);
 		temp_ptr = s;
 		if (!*s)
 			break ;
