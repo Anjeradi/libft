@@ -19,7 +19,7 @@ in this project.
 The following resources were used to achieve this project's objectives:
 
 - **The C programming language by Brian** Kernighan and Dennis Ritchie;
-- **Memory Managment, Explained simply (parts 1 and 2)** videos by Nic Barker on youtube[YouYube](https://youtu.be/3rez2rDYHHA?si=gp6lweEpN3D9d8GQ);
+- **Memory Managment, Explained simply (parts 1 and 2)** videos by Nic Barker on youtube [YouYube](https://youtu.be/3rez2rDYHHA?si=gp6lweEpN3D9d8GQ);
 - **The Linux Man pages**
 
 ### AI usage
@@ -33,20 +33,20 @@ The library "Libft.a" can be used like any other library by including its header
 linking it during compilation. e.g:
 
 ```c
-	#include "libft.h"
+#include "libft.h"
 
-	int main(void)
-	{
-		ft_putendl_fd("Hello, world!", STDOUT);
-		return (0);
-	}
+int main(void)
+{
+	ft_putendl_fd("Hello, world!", STDOUT);
+	return (0);
+}
 ```
 
 ```bash
-	cc main.c ./libft.a -I. -o main
+cc main.c ./libft.a -I. -o main
 ```
 or, addittionaly
 
 ```bash
-	cc main.c -L. -lft I. -o main
+cc main.c -L. -lft I. -o main
 ```
