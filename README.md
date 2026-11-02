@@ -30,7 +30,7 @@ and assist with formatting this README file.
 
 ## Usage
 
-The library "Libft.a" can be used like any other library by including its header file (libft.h)
+The library "Libft.a" can be used like any other library by including its header file (libft.h) and
 linking it during compilation. e.g:
 
 ```c
