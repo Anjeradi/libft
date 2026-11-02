@@ -18,10 +18,9 @@ in this project.
 
 The following resources were used to achieve this project's objectives:
 
-	- The C programming language by Brian Kerningham and Dennis Ritchie;
-	- [Memory Managment, Explained simply (parts 1 and 2)](https://youtu.be/3rez2rDYHHA?si=gp6lweEpN3D9d8GQ) 
-	videos by Nic Barker on youtube;
-	- The Linux Man pages
+- **The C programming language by Brian** Kernighan and Dennis Ritchie;
+- **Memory Managment, Explained simply (parts 1 and 2)** videos by Nic Barker on youtube[YouYube](https://youtu.be/3rez2rDYHHA?si=gp6lweEpN3D9d8GQ);
+- **The Linux Man pages**
 
 ### AI usage
 
