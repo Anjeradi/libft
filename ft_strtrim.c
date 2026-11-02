@@ -13,25 +13,27 @@
 #include "libft.h"
 
 static unsigned int	cmp_set(char c, char const *set);
+static size_t count_total_alloc(char const *s, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed_s;
-	size_t	i;
+    size_t total_len;
 
 	if (!s1 || !set)
 		return (NULL);
-	trimmed_s = (char *)malloc(ft_strlen(s1) + 1);
+    total_len = count_total_alloc(s1, set);
+    if (!total_len)
+    {
+        return (ft_strdup(""));
+    }
+	trimmed_s = (char *)malloc(total_len + 1);
 	if (!trimmed_s)
 		return (NULL);
-	i = 0;
-	while (*s1)
-	{
-		if (!cmp_set(*s1, set))
-			trimmed_s[i++] = *s1;
-		s1++;
-	}
-	trimmed_s[i] = '\0';
+    while (*s1 && cmp_set(*s1, set))
+        s1++;
+    ft_memcpy(trimmed_s, s1, total_len);
+    trimmed_s[total_len] = '\0';
 	return (trimmed_s);
 }
 
@@ -42,3 +44,21 @@ static unsigned int cmp_set(char c, char const *set)
 	return (c == *set);
 }
 
+static size_t count_total_alloc(char const *s, char const *set)
+{
+	char const *start;
+    char const *end;
+
+    while (cmp_set(*s, set))
+        s++;
+    if (!*s)
+        return (0);
+    start = s;
+    while (*s)
+    {
+        if (!cmp_set(*s, set))
+            end = s;
+        s++;
+    }
+    return (end - start + 1);
+}

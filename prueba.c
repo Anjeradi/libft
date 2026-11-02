@@ -13,8 +13,7 @@ char function(unsigned int i, char c)
 
 int main(void)
 {
-  	char str[100] = "Esto es una prueba";
-    char *prueba = ft_strmapi(str, function);
+    char *prueba = ft_strtrim("aaaa", "a");
 	puts(prueba);
     free(prueba);
 	return 0;
