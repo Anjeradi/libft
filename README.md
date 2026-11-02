@@ -9,7 +9,7 @@ Additionally, implement our own functions from scratch for text parsing and link
 
 ## Instructions
 
-To compile this project simplye execute make in the root directory.
+To compile this project simply execute make in the root directory.
 
 This will generate a static library called libft.a containing all the functions implemented 
 in this project.
