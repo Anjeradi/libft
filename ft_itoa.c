@@ -20,22 +20,14 @@ char	*ft_itoa(int n)
 	size_t	size;
 	char	*number;
 	unsigned int		is_negative;
-	unsigned int		offset;
 
 	is_negative = 0;
-	size = count_digits(n);
 	if (n < 0)
-	{
 		is_negative = 1;
-		offset = 2;
-	}
-	else
-		offset = 1;
-	number = (char *)malloc(size + offset);
+	size = count_digits(n);
+	number = (char *)malloc(size);
 	if (!number)
 		return (NULL);
-	if (is_negative)
-		number[0] = '-';
 	build_number(number, n, size, is_negative);
 	return (number);
 }

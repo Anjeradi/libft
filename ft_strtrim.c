@@ -39,9 +39,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 static unsigned int cmp_set(char c, char const *set)
 {
-	while (*set && *set != c)
+	while (*set)
+    {
+        if (*set == c)
+            return (1);
 		set++;
-	return (c == *set);
+    }
+	return (0);
 }
 
 static size_t count_total_alloc(char const *s, char const *set)
