@@ -26,7 +26,7 @@ The following resources were used to achieve this project's objectives:
 ### AI usage
 
 AI was used in this project's as a learnign tool to explain memory management concepts
-and assist with formatting this README readme file.
+and assist with formatting this README file.
 
 ## Usage
 
