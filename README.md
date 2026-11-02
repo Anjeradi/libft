@@ -43,7 +43,7 @@ int main(void)
 ```
 
 ```bash
-cc main.c ./libft.a -I. -o main
+cc main.c ./libft.a -o main
 ```
 or, addittionaly
 
