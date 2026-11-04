@@ -23,11 +23,11 @@ Main objectives
 
 To compile the library, you will need:
 
-- A C compiler (such as cc or gcc).
+- A C compiler (such as Clang or GCC).
 - GNU Make.
 - A Unix-like environment (Linux or macOS).
 
-###Compilation
+### Compilation
 
 Clone the repository and navigate to its root directory:
 
@@ -196,11 +196,11 @@ Run the resulting executable:
 
 The following resources were used throughout the development of this project to understand the underlying concepts and achieve its objectives.
 
-The C Programming Language — Brian Kernighan and Dennis Ritchie.
-Memory Management, Explained Simply (Parts 1 and 2) — Nic Barker on YouTube.
-The Linux Man Pages — Man-pages.
-Queue Data Structure & Operations (Linked List Based) — Portfolio Courses on YouTube.
-Split Strings Function — Portfolio Courses on YouTube.
+- The C Programming Language — Brian Kernighan and Dennis Ritchie.
+- Memory Management, Explained Simply (Parts 1 and 2) — Nic Barker on [YouTube](https://youtu.be/3rez2rDYHHA?si=ijNCTjFWy_tJVq2u).
+- The Linux Man Pages — [Man-pages](https://man7.org/linux/man-pages/).
+- Queue Data Structure & Operations (Linked List Based) — Portfolio Courses on [YouTube](https://youtu.be/YjxKYxpf51E?si=HSLeNgEHYjgQtS7c).
+- Split Strings Function — Portfolio Courses on [YouTube](https://youtu.be/Vp6OELK4gmo?si=NUA4U4WREVpvI6rm).
 
 ## AI Usage
 
