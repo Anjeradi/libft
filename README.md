@@ -32,7 +32,7 @@ To compile the library, you will need:
 Clone the repository and navigate to its root directory:
 
 ```bash
-git clone <repository-url>
+git clone <repository-url> libft
 cd libft
 ```
 
