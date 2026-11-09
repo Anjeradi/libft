@@ -10,3 +10,6 @@ prueba
 
 # text files
 *.txt
+
+# static libraries
+*.a
