@@ -8,7 +8,8 @@ Beyond reproducing standard C functions, this project introduces additional util
 
 The resulting library, libft.a, serves as a foundation for future projects throughout the 42 curriculum, providing a collection of reusable functions that can be easily integrated into other C programs.
 
-Main objectives
+Main objectives:
+
 - Understand how static libraries work and how to create them.
 - Develop a better understanding of pointers and memory addresses.
 - Learn how to allocate, manage, and free dynamic memory.

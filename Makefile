@@ -22,9 +22,6 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rcs $@ $^
 
-prueba.o: prueba.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@
-
 ft_isdigit.o: ft_isdigit.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
