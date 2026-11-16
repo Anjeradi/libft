@@ -145,15 +145,15 @@ ft_lstiter.o: ft_lstiter.c libft.h
 ft_lstmap.o: ft_lstmap.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-ft_stchrr.o: ft_stchrr.c libft.h
+ft_strrchr.o: ft_strrchr.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean fclean re
 
 clean:
-	rm $(OBJECTS)
+	rm -f $(OBJECTS)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
