@@ -148,7 +148,7 @@ ft_lstmap.o: ft_lstmap.c libft.h
 ft_strrchr.o: ft_strrchr.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-.PHONY: clean fclean re
+.PHONY: all clean fclean re
 
 clean:
 	rm -f $(OBJECTS)
