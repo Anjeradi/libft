@@ -19,22 +19,17 @@ int	ft_atoi(const char *s)
 
 	while (*s == ' ' || (*s >= 9 && *s <= 13))
 		s++;
-	is_negative = 0;
+	is_negative = 1;
 	if (*s == '-' || *s == '+')
 	{
 		if (*s == '-')
-		{
-			is_negative = 1;
-		}
+			is_negative = -1;
 		s++;
 	}
 	number = 0;
 	while (ft_isdigit(*s))
 	{
-		if (is_negative)
-			number = number * 10 - (*s - '0');
-		else
-			number = number * 10 + (*s - '0');
+		number = number * 10 + (is_negative * (*s - '0'));
 		s++;
 	}
 	return (number);

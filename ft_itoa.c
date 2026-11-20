@@ -61,7 +61,7 @@ static void	build_number(char *number, int n,
 		number[0] = '0';
 	while (n != 0)
 	{
-		*p = abs_number(n) % 10 + '0';
+		*p = abs_number(n % 10) + '0';
 		p--;
 		n /= 10;
 	}
